@@ -1,0 +1,17 @@
+
+---
+- name: Configure VMs in Cloud
+  hosts: all
+  tasks:
+    - name: Install Apache on Debian
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Install HTTPD on RHEL
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family == "RedHat"

@@ -1,0 +1,17 @@
+
+# Configuration file example
+
+vmware:
+  vcenter_server: "vcenter.local"
+  username: "admin"
+  password: "password"
+
+cloud:
+  google_cloud:
+    project_id: "your_project_id"
+    credentials_file: "/path/to/credentials.json"
+
+  aws:
+    access_key: "your_access_key"
+    secret_key: "your_secret_key"
+    region: "us-west-2"
